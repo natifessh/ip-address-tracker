@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+      <h1 class="Title">IP Address Tracker</h1>
+      <div class="input-div">
+      <input type="text" class="ip-input-section" placeholder=" Search for any IP address or domain">
+      <button class="btn" type="submit"><img src="/images/icon-arrow.svg" alt=""></button> </div>
+  </header>
+    <div class="ip-detail">
+     <div class="info">
+       <p>IP Address</p>
+       <h4 class="ip-adress"></h4>
+     </div>
+     <div class="separator"></div>
+     <div class="info">
+       <p>Location</p>
+       <h4 class="location"></h4>
+     </div>
+     <div class="separator"></div>
+     <div class="info">
+       <p>Timezone</p>
+       <h4 class="time-zone"></h4>
+     </div>
+     <div class="separator"></div>
+     <div class="info">
+       <p>ISP</p>
+       <h4 class="isp-adress"></h4>
+     </div>
+     
+    </div>
+    <div id="map"></div>
+  
+
+ 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/natifessh">natifessh</a>.
+  </div>
+  <script src="script.js"></script>
+  
+
+  
+</body>
+</html>

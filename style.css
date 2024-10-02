@@ -1,0 +1,144 @@
+
+#map {
+  height: 500px;
+  width: 100%;
+  margin-top: -2rem;
+  z-index: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-image: url('/images/pattern-bg-desktop.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+.input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  z-index: 100;
+}
+
+.ip-input-section {
+  height: 2.7em;
+  width:40rem;
+  border-radius: 12px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 1px;
+  padding-left: 12px;
+}
+
+.ip-input-section:focus {
+  border: none;
+  outline: none !important;
+}
+
+.btn {
+  background-color: black;
+  border: none;
+  height: 2.9em;
+  width: 3em;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: -2.5rem;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 15px;
+}
+
+.ip-detail {
+  background-color: white;
+  height: 8rem;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 80%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 230px;
+  z-index: 100;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: -2rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.info p {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 0.3rem;
+}
+.Title{
+  margin-top: -4rem;
+}
+.info h4 {
+  font-size: 18px;
+  color: hsl(0, 0%, 17%);
+}
+
+.separator {
+  width: 1px;
+  height: 120px;
+  background-color: hsl(0, 0%, 59%);
+}
+
+@media(max-width:768px){
+  body{
+    width: 100%;
+  }
+  .ip-input-section{
+    width:25em;
+  }
+  .ip-detail{
+    display: flex;
+    flex-direction: column;
+    height:20em;
+    padding: 2px;
+    width: 18rem;
+  }
+  .info{
+    margin: -0.5em;
+    height: 3em;
+  }
+  .separator{
+    display: none;
+  }
+  #map {
+    height:20rem ;
+    width: 100%;
+    margin-top: -2rem;
+    z-index: 0;
+  }
+  
+}
+
