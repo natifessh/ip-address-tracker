@@ -1,5 +1,6 @@
+
 async function getApiKey() {
-    let response = await fetch("http://localhost:3001/get-api-key");
+    let response = await fetch("https://ip-address-tracker-ziuj.onrender.com/get-api-key");
     let data = await response.json();
     return data.apiKey;
   }
@@ -57,6 +58,37 @@ timeZone.textContent=response.location.timezone
 
 
 }
+window.addEventListener("DOMContentLoaded",function(e){
+    e.preventDefault()
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+      
+          console.log("Latitude:", latitude);
+          console.log("Longitude:", longitude);
+          map.setView([latitude,longitude], 13);
+          L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           maxZoom: 13,
+           attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+       }).addTo(map);
+       var marker = L.marker([latitude, longitude]).addTo(map);
+      
+       
+       
+        }, function(error) {
+          console.log("Error occurred. Error code:", error.code);
+          alert("Unable to retrieve location.");
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+
+
+   
+   
+
+})
 
 
 btn.addEventListener("click",function(){
