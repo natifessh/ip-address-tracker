@@ -1,5 +1,11 @@
+async function getApiKey() {
+    let response = await fetch("http://localhost:3001/get-api-key");
+    let data = await response.json();
+    return data.apiKey;
+  }
 //const { map } = require("leaflet")
 var map = L.map('map')
+
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -23,23 +29,23 @@ let btn=document.querySelector(".btn")
 
 
 const getIspDetail=async function(){
-    let apiKey="YOUR_API_KEY";
-    let ispValue=inputSection.value;
+    let apiKey=await getApiKey();
+    let ispValue=inputSection.value.trim();
+    console.log(ispValue)
     try{
         var data=await fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=${apiKey}&ipAddress=${ispValue}`)
         if (!data.ok) throw new Error("Network response was not ok " + data.statusText);
         var response = await data.json();
-        var response=await data.json()
-
+       
     }catch (error) {
         console.error('There was a problem with the fetch operation:', error);
       
     }
   
    console.log(response)
-    map.setView([response.location.lat, response.location.lng], 19);
+    map.setView([response.location.lat, response.location.lng], 13);
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 9,
+    maxZoom: 13,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
@@ -58,7 +64,7 @@ btn.addEventListener("click",function(){
     console.log()
   
     getIspDetail()
-    inputSection.value=""
+    
 
    
 

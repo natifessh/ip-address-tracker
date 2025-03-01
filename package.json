@@ -1,0 +1,24 @@
+{
+  "name": "ip-address-tracker",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natifessh/ip-address-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/natifessh/ip-address-tracker/issues"
+  },
+  "homepage": "https://github.com/natifessh/ip-address-tracker#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}

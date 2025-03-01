@@ -112,7 +112,7 @@ header {
   background-color: hsl(0, 0%, 59%);
 }
 
-@media(max-width:768px){
+@media(max-width:760px){
   body{
     width: 100%;
   }
@@ -122,9 +122,14 @@ header {
   .ip-detail{
     display: flex;
     flex-direction: column;
-    height:20em;
+    height:fit-content;
     padding: 2px;
     width: 18rem;
+  }
+  .ip-detail>div{
+    height: 20px;
+    padding: -20px;
+    width: 100%;
   }
   .info{
     margin: -0.5em;
@@ -134,10 +139,14 @@ header {
     display: none;
   }
   #map {
-    height:20rem ;
+    height: 650px; ;
     width: 100%;
     margin-top: -2rem;
     z-index: 0;
+  }
+ 
+  #attribution{
+    margin-top: 200px;
   }
   
 }
