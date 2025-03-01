@@ -1,5 +1,5 @@
 async function getApiKey() {
-    let response = await fetch("http://localhost:3001/get-api-key");
+    let response = await fetch("https://ip-address-tracker-ziuj.onrender.com/get-api-key");
     let data = await response.json();
     return data.apiKey;
   }
